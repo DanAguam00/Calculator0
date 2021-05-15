@@ -76,6 +76,7 @@ namespace Calculator0
             this.Btn_Equal.TabIndex = 31;
             this.Btn_Equal.Text = "=";
             this.Btn_Equal.UseVisualStyleBackColor = false;
+            this.Btn_Equal.Click += new System.EventHandler(this.Btn_Equal_Click);
             // 
             // Btn_Minus
             // 

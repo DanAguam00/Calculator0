@@ -21,5 +21,17 @@ namespace Calculator0
         {
 
         }
+
+        private void Btn_Equal_Click(object sender, EventArgs e)
+        {
+            if (Btn_Equal.Text == "=")
+            {
+                Btn_Equal.Text = "Done";
+            }
+            else
+            {
+                Btn_Equal.Text = "=";
+            }
+        }
     }
 }
