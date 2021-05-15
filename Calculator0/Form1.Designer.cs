@@ -29,13 +29,13 @@ namespace Calculator0
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txtbx_1 = new System.Windows.Forms.TextBox();
             this.Btn_0 = new System.Windows.Forms.Button();
             this.Btn_Equal = new System.Windows.Forms.Button();
             this.Btn_Minus = new System.Windows.Forms.Button();
             this.Btn_Dvd = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.Btn_Sqrt = new System.Windows.Forms.Button();
+            this.Btn_Sqr = new System.Windows.Forms.Button();
             this.Btn_9 = new System.Windows.Forms.Button();
             this.Btn_8 = new System.Windows.Forms.Button();
             this.Btn_7 = new System.Windows.Forms.Button();
@@ -51,12 +51,12 @@ namespace Calculator0
             this.Btn_Multiply = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Txtbx_1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 23);
-            this.textBox1.TabIndex = 33;
+            this.Txtbx_1.Location = new System.Drawing.Point(12, 12);
+            this.Txtbx_1.Name = "Txtbx_1";
+            this.Txtbx_1.Size = new System.Drawing.Size(238, 23);
+            this.Txtbx_1.TabIndex = 33;
             // 
             // Btn_0
             // 
@@ -69,48 +69,53 @@ namespace Calculator0
             // 
             // Btn_Equal
             // 
+            this.Btn_Equal.BackColor = System.Drawing.SystemColors.Highlight;
             this.Btn_Equal.Location = new System.Drawing.Point(195, 305);
             this.Btn_Equal.Name = "Btn_Equal";
             this.Btn_Equal.Size = new System.Drawing.Size(55, 56);
             this.Btn_Equal.TabIndex = 31;
             this.Btn_Equal.Text = "=";
-            this.Btn_Equal.UseVisualStyleBackColor = true;
+            this.Btn_Equal.UseVisualStyleBackColor = false;
             // 
             // Btn_Minus
             // 
+            this.Btn_Minus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Minus.Location = new System.Drawing.Point(195, 184);
             this.Btn_Minus.Name = "Btn_Minus";
             this.Btn_Minus.Size = new System.Drawing.Size(55, 55);
             this.Btn_Minus.TabIndex = 30;
             this.Btn_Minus.Text = "-";
-            this.Btn_Minus.UseVisualStyleBackColor = true;
+            this.Btn_Minus.UseVisualStyleBackColor = false;
             // 
             // Btn_Dvd
             // 
+            this.Btn_Dvd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Dvd.Location = new System.Drawing.Point(195, 62);
             this.Btn_Dvd.Name = "Btn_Dvd";
             this.Btn_Dvd.Size = new System.Drawing.Size(55, 55);
             this.Btn_Dvd.TabIndex = 29;
             this.Btn_Dvd.Text = "/";
-            this.Btn_Dvd.UseVisualStyleBackColor = true;
+            this.Btn_Dvd.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // Btn_Sqrt
             // 
-            this.button12.Location = new System.Drawing.Point(134, 62);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(55, 55);
-            this.button12.TabIndex = 28;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.Btn_Sqrt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Sqrt.Location = new System.Drawing.Point(134, 62);
+            this.Btn_Sqrt.Name = "Btn_Sqrt";
+            this.Btn_Sqrt.Size = new System.Drawing.Size(55, 55);
+            this.Btn_Sqrt.TabIndex = 28;
+            this.Btn_Sqrt.Text = "x^1/2";
+            this.Btn_Sqrt.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // Btn_Sqr
             // 
-            this.button11.Location = new System.Drawing.Point(73, 62);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(55, 55);
-            this.button11.TabIndex = 27;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.Btn_Sqr.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Sqr.Location = new System.Drawing.Point(73, 62);
+            this.Btn_Sqr.Name = "Btn_Sqr";
+            this.Btn_Sqr.Size = new System.Drawing.Size(55, 55);
+            this.Btn_Sqr.TabIndex = 27;
+            this.Btn_Sqr.Text = "x^2";
+            this.Btn_Sqr.UseVisualStyleBackColor = false;
             // 
             // Btn_9
             // 
@@ -195,39 +200,43 @@ namespace Calculator0
             // 
             // PlusMinus
             // 
+            this.PlusMinus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PlusMinus.Location = new System.Drawing.Point(12, 306);
             this.PlusMinus.Name = "PlusMinus";
             this.PlusMinus.Size = new System.Drawing.Size(55, 55);
             this.PlusMinus.TabIndex = 17;
             this.PlusMinus.Text = "+/-";
-            this.PlusMinus.UseVisualStyleBackColor = true;
+            this.PlusMinus.UseVisualStyleBackColor = false;
             // 
             // Btn_Dot
             // 
+            this.Btn_Dot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Dot.Location = new System.Drawing.Point(134, 305);
             this.Btn_Dot.Name = "Btn_Dot";
             this.Btn_Dot.Size = new System.Drawing.Size(55, 55);
             this.Btn_Dot.TabIndex = 34;
             this.Btn_Dot.Text = ".";
-            this.Btn_Dot.UseVisualStyleBackColor = true;
+            this.Btn_Dot.UseVisualStyleBackColor = false;
             // 
             // Btn_Plus
             // 
+            this.Btn_Plus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Plus.Location = new System.Drawing.Point(195, 243);
             this.Btn_Plus.Name = "Btn_Plus";
             this.Btn_Plus.Size = new System.Drawing.Size(55, 56);
             this.Btn_Plus.TabIndex = 35;
             this.Btn_Plus.Text = "+";
-            this.Btn_Plus.UseVisualStyleBackColor = true;
+            this.Btn_Plus.UseVisualStyleBackColor = false;
             // 
             // Btn_Multiply
             // 
+            this.Btn_Multiply.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Multiply.Location = new System.Drawing.Point(195, 123);
             this.Btn_Multiply.Name = "Btn_Multiply";
             this.Btn_Multiply.Size = new System.Drawing.Size(55, 55);
             this.Btn_Multiply.TabIndex = 36;
             this.Btn_Multiply.Text = "*";
-            this.Btn_Multiply.UseVisualStyleBackColor = true;
+            this.Btn_Multiply.UseVisualStyleBackColor = false;
             // 
             // Calculator
             // 
@@ -237,13 +246,13 @@ namespace Calculator0
             this.Controls.Add(this.Btn_Multiply);
             this.Controls.Add(this.Btn_Plus);
             this.Controls.Add(this.Btn_Dot);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txtbx_1);
             this.Controls.Add(this.Btn_0);
             this.Controls.Add(this.Btn_Equal);
             this.Controls.Add(this.Btn_Minus);
             this.Controls.Add(this.Btn_Dvd);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.Btn_Sqrt);
+            this.Controls.Add(this.Btn_Sqr);
             this.Controls.Add(this.Btn_9);
             this.Controls.Add(this.Btn_8);
             this.Controls.Add(this.Btn_7);
@@ -264,13 +273,13 @@ namespace Calculator0
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txtbx_1;
         private System.Windows.Forms.Button Btn_0;
         private System.Windows.Forms.Button Btn_Equal;
         private System.Windows.Forms.Button Btn_Minus;
         private System.Windows.Forms.Button Btn_Dvd;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button Btn_Sqrt;
+        private System.Windows.Forms.Button Btn_Sqr;
         private System.Windows.Forms.Button Btn_9;
         private System.Windows.Forms.Button Btn_8;
         private System.Windows.Forms.Button Btn_7;
