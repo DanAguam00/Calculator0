@@ -57,6 +57,7 @@ namespace Calculator0
             this.Txtbx_1.Name = "Txtbx_1";
             this.Txtbx_1.Size = new System.Drawing.Size(238, 23);
             this.Txtbx_1.TabIndex = 33;
+            this.Txtbx_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Btn_0
             // 
@@ -66,6 +67,7 @@ namespace Calculator0
             this.Btn_0.TabIndex = 32;
             this.Btn_0.Text = "0";
             this.Btn_0.UseVisualStyleBackColor = true;
+            this.Btn_0.Click += new System.EventHandler(this.Btn_0_Click);
             // 
             // Btn_Equal
             // 
@@ -126,6 +128,7 @@ namespace Calculator0
             this.Btn_9.TabIndex = 26;
             this.Btn_9.Text = "9";
             this.Btn_9.UseVisualStyleBackColor = true;
+            this.Btn_9.Click += new System.EventHandler(this.Btn_9_Click);
             // 
             // Btn_8
             // 
@@ -135,6 +138,7 @@ namespace Calculator0
             this.Btn_8.TabIndex = 25;
             this.Btn_8.Text = "8";
             this.Btn_8.UseVisualStyleBackColor = true;
+            this.Btn_8.Click += new System.EventHandler(this.Btn_8_Click);
             // 
             // Btn_7
             // 
@@ -144,6 +148,7 @@ namespace Calculator0
             this.Btn_7.TabIndex = 24;
             this.Btn_7.Text = "7";
             this.Btn_7.UseVisualStyleBackColor = true;
+            this.Btn_7.Click += new System.EventHandler(this.Btn_7_Click);
             // 
             // Btn_6
             // 
@@ -153,6 +158,7 @@ namespace Calculator0
             this.Btn_6.TabIndex = 23;
             this.Btn_6.Text = "6";
             this.Btn_6.UseVisualStyleBackColor = true;
+            this.Btn_6.Click += new System.EventHandler(this.Btn_6_Click);
             // 
             // Btn_5
             // 
@@ -162,6 +168,7 @@ namespace Calculator0
             this.Btn_5.TabIndex = 22;
             this.Btn_5.Text = "5";
             this.Btn_5.UseVisualStyleBackColor = true;
+            this.Btn_5.Click += new System.EventHandler(this.Btn_5_Click);
             // 
             // Btn_4
             // 
@@ -171,6 +178,7 @@ namespace Calculator0
             this.Btn_4.TabIndex = 21;
             this.Btn_4.Text = "4";
             this.Btn_4.UseVisualStyleBackColor = true;
+            this.Btn_4.Click += new System.EventHandler(this.Btn_4_Click);
             // 
             // Btn_3
             // 
@@ -180,6 +188,7 @@ namespace Calculator0
             this.Btn_3.TabIndex = 20;
             this.Btn_3.Text = "3";
             this.Btn_3.UseVisualStyleBackColor = true;
+            this.Btn_3.Click += new System.EventHandler(this.Btn_3_Click);
             // 
             // Btn_2
             // 
@@ -189,6 +198,7 @@ namespace Calculator0
             this.Btn_2.TabIndex = 19;
             this.Btn_2.Text = "2";
             this.Btn_2.UseVisualStyleBackColor = true;
+            this.Btn_2.Click += new System.EventHandler(this.Btn_2_Click);
             // 
             // Btn_1
             // 
@@ -198,6 +208,7 @@ namespace Calculator0
             this.Btn_1.TabIndex = 18;
             this.Btn_1.Text = "1";
             this.Btn_1.UseVisualStyleBackColor = true;
+            this.Btn_1.Click += new System.EventHandler(this.Btn_1_Click);
             // 
             // PlusMinus
             // 
@@ -228,6 +239,7 @@ namespace Calculator0
             this.Btn_Plus.TabIndex = 35;
             this.Btn_Plus.Text = "+";
             this.Btn_Plus.UseVisualStyleBackColor = false;
+            this.Btn_Plus.Click += new System.EventHandler(this.Btn_Plus_Click);
             // 
             // Btn_Multiply
             // 
@@ -275,12 +287,6 @@ namespace Calculator0
         #endregion
 
         private System.Windows.Forms.TextBox Txtbx_1;
-        private System.Windows.Forms.Button Btn_0;
-        private System.Windows.Forms.Button Btn_Equal;
-        private System.Windows.Forms.Button Btn_Minus;
-        private System.Windows.Forms.Button Btn_Dvd;
-        private System.Windows.Forms.Button Btn_Sqrt;
-        private System.Windows.Forms.Button Btn_Sqr;
         private System.Windows.Forms.Button Btn_9;
         private System.Windows.Forms.Button Btn_8;
         private System.Windows.Forms.Button Btn_7;
@@ -290,10 +296,16 @@ namespace Calculator0
         private System.Windows.Forms.Button Btn_3;
         private System.Windows.Forms.Button Btn_2;
         private System.Windows.Forms.Button Btn_1;
+        private System.Windows.Forms.Button Btn_0;
+        private System.Windows.Forms.Button Btn_Plus;
+        private System.Windows.Forms.Button Btn_Minus;
+        private System.Windows.Forms.Button Btn_Multiply;
+        private System.Windows.Forms.Button Btn_Dvd;
+        private System.Windows.Forms.Button Btn_Sqr;
+        private System.Windows.Forms.Button Btn_Sqrt;
         private System.Windows.Forms.Button PlusMinus;
         private System.Windows.Forms.Button Btn_Dot;
-        private System.Windows.Forms.Button Btn_Plus;
-        private System.Windows.Forms.Button Btn_Multiply;
+        private System.Windows.Forms.Button Btn_Equal;
     }
 }
 
