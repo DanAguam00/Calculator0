@@ -89,6 +89,7 @@ namespace Calculator0
             this.Btn_Minus.TabIndex = 30;
             this.Btn_Minus.Text = "-";
             this.Btn_Minus.UseVisualStyleBackColor = false;
+            this.Btn_Minus.Click += new System.EventHandler(this.Btn_Minus_Click);
             // 
             // Btn_Dvd
             // 
@@ -99,6 +100,7 @@ namespace Calculator0
             this.Btn_Dvd.TabIndex = 29;
             this.Btn_Dvd.Text = "/";
             this.Btn_Dvd.UseVisualStyleBackColor = false;
+            this.Btn_Dvd.Click += new System.EventHandler(this.Btn_Dvd_Click);
             // 
             // Btn_Sqrt
             // 
@@ -229,6 +231,7 @@ namespace Calculator0
             this.Btn_Dot.TabIndex = 34;
             this.Btn_Dot.Text = ".";
             this.Btn_Dot.UseVisualStyleBackColor = false;
+            this.Btn_Dot.Click += new System.EventHandler(this.Btn_Dot_Click);
             // 
             // Btn_Plus
             // 
@@ -250,6 +253,7 @@ namespace Calculator0
             this.Btn_Multiply.TabIndex = 36;
             this.Btn_Multiply.Text = "*";
             this.Btn_Multiply.UseVisualStyleBackColor = false;
+            this.Btn_Multiply.Click += new System.EventHandler(this.Btn_Multiply_Click);
             // 
             // Calculator
             // 

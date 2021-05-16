@@ -88,5 +88,25 @@ namespace Calculator0
         {
             Txtbx_1.Text = Txtbx_1.Text + "+";
         }
+
+        private void Btn_Minus_Click(object sender, EventArgs e)
+        {
+            Txtbx_1.Text = Txtbx_1.Text + "-";
+        }
+
+        private void Btn_Multiply_Click(object sender, EventArgs e)
+        {
+            Txtbx_1.Text = Txtbx_1.Text + "*";
+        }
+
+        private void Btn_Dvd_Click(object sender, EventArgs e)
+        {
+            Txtbx_1.Text = Txtbx_1.Text + "/";
+        }
+
+        private void Btn_Dot_Click(object sender, EventArgs e)
+        {
+            Txtbx_1.Text = Txtbx_1.Text + ".";
+        }
     }
 }
