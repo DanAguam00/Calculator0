@@ -49,10 +49,18 @@ namespace Calculator0
             this.Btn_Dot = new System.Windows.Forms.Button();
             this.Btn_Plus = new System.Windows.Forms.Button();
             this.Btn_Multiply = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Percent = new System.Windows.Forms.Button();
+            this.Btn_Backspace = new System.Windows.Forms.Button();
+            this.Btn_GlobalEntry = new System.Windows.Forms.Button();
+            this.Btn_ClearEntry = new System.Windows.Forms.Button();
+            this.TxtBx_2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Txtbx_1
             // 
+            this.Txtbx_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Txtbx_1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Txtbx_1.Location = new System.Drawing.Point(12, 12);
             this.Txtbx_1.Name = "Txtbx_1";
             this.Txtbx_1.Size = new System.Drawing.Size(238, 23);
@@ -61,7 +69,7 @@ namespace Calculator0
             // 
             // Btn_0
             // 
-            this.Btn_0.Location = new System.Drawing.Point(73, 305);
+            this.Btn_0.Location = new System.Drawing.Point(72, 383);
             this.Btn_0.Name = "Btn_0";
             this.Btn_0.Size = new System.Drawing.Size(55, 55);
             this.Btn_0.TabIndex = 32;
@@ -72,7 +80,7 @@ namespace Calculator0
             // Btn_Equal
             // 
             this.Btn_Equal.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Btn_Equal.Location = new System.Drawing.Point(195, 305);
+            this.Btn_Equal.Location = new System.Drawing.Point(194, 383);
             this.Btn_Equal.Name = "Btn_Equal";
             this.Btn_Equal.Size = new System.Drawing.Size(55, 56);
             this.Btn_Equal.TabIndex = 31;
@@ -83,7 +91,7 @@ namespace Calculator0
             // Btn_Minus
             // 
             this.Btn_Minus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Minus.Location = new System.Drawing.Point(195, 184);
+            this.Btn_Minus.Location = new System.Drawing.Point(194, 262);
             this.Btn_Minus.Name = "Btn_Minus";
             this.Btn_Minus.Size = new System.Drawing.Size(55, 55);
             this.Btn_Minus.TabIndex = 30;
@@ -94,7 +102,7 @@ namespace Calculator0
             // Btn_Dvd
             // 
             this.Btn_Dvd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Dvd.Location = new System.Drawing.Point(195, 62);
+            this.Btn_Dvd.Location = new System.Drawing.Point(194, 140);
             this.Btn_Dvd.Name = "Btn_Dvd";
             this.Btn_Dvd.Size = new System.Drawing.Size(55, 55);
             this.Btn_Dvd.TabIndex = 29;
@@ -105,7 +113,7 @@ namespace Calculator0
             // Btn_Sqrt
             // 
             this.Btn_Sqrt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Sqrt.Location = new System.Drawing.Point(134, 62);
+            this.Btn_Sqrt.Location = new System.Drawing.Point(133, 140);
             this.Btn_Sqrt.Name = "Btn_Sqrt";
             this.Btn_Sqrt.Size = new System.Drawing.Size(55, 55);
             this.Btn_Sqrt.TabIndex = 28;
@@ -115,7 +123,7 @@ namespace Calculator0
             // Btn_Sqr
             // 
             this.Btn_Sqr.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Sqr.Location = new System.Drawing.Point(73, 62);
+            this.Btn_Sqr.Location = new System.Drawing.Point(72, 140);
             this.Btn_Sqr.Name = "Btn_Sqr";
             this.Btn_Sqr.Size = new System.Drawing.Size(55, 55);
             this.Btn_Sqr.TabIndex = 27;
@@ -124,7 +132,7 @@ namespace Calculator0
             // 
             // Btn_9
             // 
-            this.Btn_9.Location = new System.Drawing.Point(134, 123);
+            this.Btn_9.Location = new System.Drawing.Point(133, 201);
             this.Btn_9.Name = "Btn_9";
             this.Btn_9.Size = new System.Drawing.Size(55, 55);
             this.Btn_9.TabIndex = 26;
@@ -134,7 +142,8 @@ namespace Calculator0
             // 
             // Btn_8
             // 
-            this.Btn_8.Location = new System.Drawing.Point(73, 123);
+            this.Btn_8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Btn_8.Location = new System.Drawing.Point(72, 201);
             this.Btn_8.Name = "Btn_8";
             this.Btn_8.Size = new System.Drawing.Size(55, 55);
             this.Btn_8.TabIndex = 25;
@@ -144,7 +153,7 @@ namespace Calculator0
             // 
             // Btn_7
             // 
-            this.Btn_7.Location = new System.Drawing.Point(12, 123);
+            this.Btn_7.Location = new System.Drawing.Point(11, 201);
             this.Btn_7.Name = "Btn_7";
             this.Btn_7.Size = new System.Drawing.Size(55, 55);
             this.Btn_7.TabIndex = 24;
@@ -154,7 +163,7 @@ namespace Calculator0
             // 
             // Btn_6
             // 
-            this.Btn_6.Location = new System.Drawing.Point(134, 184);
+            this.Btn_6.Location = new System.Drawing.Point(133, 262);
             this.Btn_6.Name = "Btn_6";
             this.Btn_6.Size = new System.Drawing.Size(55, 55);
             this.Btn_6.TabIndex = 23;
@@ -164,7 +173,7 @@ namespace Calculator0
             // 
             // Btn_5
             // 
-            this.Btn_5.Location = new System.Drawing.Point(73, 184);
+            this.Btn_5.Location = new System.Drawing.Point(72, 262);
             this.Btn_5.Name = "Btn_5";
             this.Btn_5.Size = new System.Drawing.Size(55, 55);
             this.Btn_5.TabIndex = 22;
@@ -174,7 +183,7 @@ namespace Calculator0
             // 
             // Btn_4
             // 
-            this.Btn_4.Location = new System.Drawing.Point(12, 184);
+            this.Btn_4.Location = new System.Drawing.Point(11, 262);
             this.Btn_4.Name = "Btn_4";
             this.Btn_4.Size = new System.Drawing.Size(55, 55);
             this.Btn_4.TabIndex = 21;
@@ -184,7 +193,7 @@ namespace Calculator0
             // 
             // Btn_3
             // 
-            this.Btn_3.Location = new System.Drawing.Point(134, 245);
+            this.Btn_3.Location = new System.Drawing.Point(133, 323);
             this.Btn_3.Name = "Btn_3";
             this.Btn_3.Size = new System.Drawing.Size(55, 55);
             this.Btn_3.TabIndex = 20;
@@ -194,7 +203,7 @@ namespace Calculator0
             // 
             // Btn_2
             // 
-            this.Btn_2.Location = new System.Drawing.Point(73, 245);
+            this.Btn_2.Location = new System.Drawing.Point(72, 323);
             this.Btn_2.Name = "Btn_2";
             this.Btn_2.Size = new System.Drawing.Size(55, 55);
             this.Btn_2.TabIndex = 19;
@@ -204,7 +213,7 @@ namespace Calculator0
             // 
             // Btn_1
             // 
-            this.Btn_1.Location = new System.Drawing.Point(12, 245);
+            this.Btn_1.Location = new System.Drawing.Point(11, 323);
             this.Btn_1.Name = "Btn_1";
             this.Btn_1.Size = new System.Drawing.Size(55, 55);
             this.Btn_1.TabIndex = 18;
@@ -215,7 +224,7 @@ namespace Calculator0
             // PlusMinus
             // 
             this.PlusMinus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PlusMinus.Location = new System.Drawing.Point(12, 306);
+            this.PlusMinus.Location = new System.Drawing.Point(11, 384);
             this.PlusMinus.Name = "PlusMinus";
             this.PlusMinus.Size = new System.Drawing.Size(55, 55);
             this.PlusMinus.TabIndex = 17;
@@ -225,7 +234,7 @@ namespace Calculator0
             // Btn_Dot
             // 
             this.Btn_Dot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Dot.Location = new System.Drawing.Point(134, 305);
+            this.Btn_Dot.Location = new System.Drawing.Point(133, 383);
             this.Btn_Dot.Name = "Btn_Dot";
             this.Btn_Dot.Size = new System.Drawing.Size(55, 55);
             this.Btn_Dot.TabIndex = 34;
@@ -236,7 +245,7 @@ namespace Calculator0
             // Btn_Plus
             // 
             this.Btn_Plus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Plus.Location = new System.Drawing.Point(195, 243);
+            this.Btn_Plus.Location = new System.Drawing.Point(194, 321);
             this.Btn_Plus.Name = "Btn_Plus";
             this.Btn_Plus.Size = new System.Drawing.Size(55, 56);
             this.Btn_Plus.TabIndex = 35;
@@ -247,7 +256,7 @@ namespace Calculator0
             // Btn_Multiply
             // 
             this.Btn_Multiply.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Multiply.Location = new System.Drawing.Point(195, 123);
+            this.Btn_Multiply.Location = new System.Drawing.Point(194, 201);
             this.Btn_Multiply.Name = "Btn_Multiply";
             this.Btn_Multiply.Size = new System.Drawing.Size(55, 55);
             this.Btn_Multiply.TabIndex = 36;
@@ -255,11 +264,78 @@ namespace Calculator0
             this.Btn_Multiply.UseVisualStyleBackColor = false;
             this.Btn_Multiply.Click += new System.EventHandler(this.Btn_Multiply_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(12, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 55);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "x^2";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Percent
+            // 
+            this.Btn_Percent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Percent.Location = new System.Drawing.Point(12, 79);
+            this.Btn_Percent.Name = "Btn_Percent";
+            this.Btn_Percent.Size = new System.Drawing.Size(55, 55);
+            this.Btn_Percent.TabIndex = 41;
+            this.Btn_Percent.Text = "%";
+            this.Btn_Percent.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Backspace
+            // 
+            this.Btn_Backspace.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Backspace.Location = new System.Drawing.Point(194, 79);
+            this.Btn_Backspace.Name = "Btn_Backspace";
+            this.Btn_Backspace.Size = new System.Drawing.Size(55, 55);
+            this.Btn_Backspace.TabIndex = 40;
+            this.Btn_Backspace.Text = "/";
+            this.Btn_Backspace.UseVisualStyleBackColor = false;
+            // 
+            // Btn_GlobalEntry
+            // 
+            this.Btn_GlobalEntry.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_GlobalEntry.Location = new System.Drawing.Point(133, 79);
+            this.Btn_GlobalEntry.Name = "Btn_GlobalEntry";
+            this.Btn_GlobalEntry.Size = new System.Drawing.Size(55, 55);
+            this.Btn_GlobalEntry.TabIndex = 39;
+            this.Btn_GlobalEntry.Text = "C";
+            this.Btn_GlobalEntry.UseVisualStyleBackColor = false;
+            // 
+            // Btn_ClearEntry
+            // 
+            this.Btn_ClearEntry.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_ClearEntry.Location = new System.Drawing.Point(72, 79);
+            this.Btn_ClearEntry.Name = "Btn_ClearEntry";
+            this.Btn_ClearEntry.Size = new System.Drawing.Size(55, 55);
+            this.Btn_ClearEntry.TabIndex = 38;
+            this.Btn_ClearEntry.Text = "CE";
+            this.Btn_ClearEntry.UseVisualStyleBackColor = false;
+            // 
+            // TxtBx_2
+            // 
+            this.TxtBx_2.BackColor = System.Drawing.SystemColors.Control;
+            this.TxtBx_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBx_2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBx_2.Location = new System.Drawing.Point(12, 35);
+            this.TxtBx_2.Name = "TxtBx_2";
+            this.TxtBx_2.Size = new System.Drawing.Size(238, 36);
+            this.TxtBx_2.TabIndex = 42;
+            this.TxtBx_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 372);
+            this.ClientSize = new System.Drawing.Size(264, 445);
+            this.Controls.Add(this.TxtBx_2);
+            this.Controls.Add(this.Btn_Percent);
+            this.Controls.Add(this.Btn_Backspace);
+            this.Controls.Add(this.Btn_GlobalEntry);
+            this.Controls.Add(this.Btn_ClearEntry);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_Multiply);
             this.Controls.Add(this.Btn_Plus);
             this.Controls.Add(this.Btn_Dot);
@@ -310,6 +386,12 @@ namespace Calculator0
         private System.Windows.Forms.Button PlusMinus;
         private System.Windows.Forms.Button Btn_Dot;
         private System.Windows.Forms.Button Btn_Equal;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Percent;
+        private System.Windows.Forms.Button Btn_Backspace;
+        private System.Windows.Forms.Button Btn_GlobalEntry;
+        private System.Windows.Forms.Button Btn_ClearEntry;
+        private System.Windows.Forms.TextBox TxtBx_2;
     }
 }
 
