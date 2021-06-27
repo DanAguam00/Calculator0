@@ -12,10 +12,8 @@ namespace Calculator0
 {
     public partial class Calculator : Form
     {
-        String operation = "";
-        Boolean operationPressed = false;
-        String num0 = "";
-        String num2 = "";
+        ReferenceClass refer = new ReferenceClass();
+        operationClass ops = new operationClass();
 
         public Calculator()
         {
@@ -26,21 +24,29 @@ namespace Calculator0
         {
             TxtBx_1.Text = TxtBx_1.Text + " = ";
 
-            if (operation.Equals("+"))
+            if (refer.Operation.Equals("+"))
             {
-                Add();
+                refer.Num1 = TxtBx_2.Text;
+                ops.Add();
+                TxtBx_2.Text = refer.Num1;
             }
-            else if (operation.Equals("-"))
+            else if (refer.Operation.Equals("-"))
             {
-                Subtract();
+                refer.Num1 = TxtBx_2.Text;
+                ops.Subtract();
+                TxtBx_2.Text = refer.Num1;
             }
-            else if (operation.Equals("*"))
+            else if (refer.Operation.Equals("*"))
             {
-                Multiply();
+                refer.Num1 = TxtBx_2.Text;
+                ops.Multiply();
+                TxtBx_2.Text = refer.Num1;
             }
-            else if (operation.Equals("/"))
+            else if (refer.Operation.Equals("/"))
             {
-                Divide();
+                refer.Num1 = TxtBx_2.Text;
+                ops.Divide();
+                TxtBx_2.Text = refer.Num1;
             }
 
             TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
@@ -99,29 +105,29 @@ namespace Calculator0
         private void Btn_Plus_Click(object sender, EventArgs e)
         {
             TxtBx_1.Text = TxtBx_1.Text + " + ";
-            operation = "+";
-            operationPressed = true;
+            refer.Operation = "+";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Minus_Click(object sender, EventArgs e)
         {
             TxtBx_1.Text = TxtBx_1.Text + " - ";
-            operation = "-";
-            operationPressed = true;
+            refer.Operation = "-";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Multiply_Click(object sender, EventArgs e)
         {
             TxtBx_1.Text = TxtBx_1.Text + " * ";
-            operation = "*";
-            operationPressed = true;
+            refer.Operation = "*";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Dvd_Click(object sender, EventArgs e)
         {
             TxtBx_1.Text = TxtBx_1.Text + " / ";
-            operation = "/";
-            operationPressed = true;
+            refer.Operation = "/";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Dot_Click(object sender, EventArgs e)
@@ -129,37 +135,17 @@ namespace Calculator0
             displayCharacter(".");
         }
 
-        private void Add()
-        {
-            TxtBx_2.Text = (float.Parse(num0) + float.Parse(TxtBx_2.Text)).ToString();
-        }
-
-        private void Subtract()
-        {
-            TxtBx_2.Text = (float.Parse(num0) - float.Parse(TxtBx_2.Text)).ToString();
-        }
-
-        private void Multiply()
-        {
-            TxtBx_2.Text = (float.Parse(num0) * float.Parse(TxtBx_2.Text)).ToString();
-        }
-
-        private void Divide()
-        {
-            TxtBx_2.Text = (float.Parse(num0) / float.Parse(TxtBx_2.Text)).ToString();
-        }
-
         private void displayCharacter(String character)
         {
-            if (operationPressed)
+            if (refer.OperationPressed)
             {
-                num0 = TxtBx_2.Text;
+                refer.Num0 = TxtBx_2.Text;
                 TxtBx_2.Text = "";
             }
 
             TxtBx_1.Text = TxtBx_1.Text + character;
             TxtBx_2.Text = TxtBx_2.Text + character;
-            operationPressed = false;
+            refer.OperationPressed = false;
         }
     }
 }
