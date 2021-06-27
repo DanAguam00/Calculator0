@@ -28,19 +28,19 @@ namespace Calculator0
 
             if (operation.Equals("+"))
             {
-                TxtBx_2.Text = (float.Parse(num0) + float.Parse(TxtBx_2.Text)).ToString();
+                Add();
             }
             else if (operation.Equals("-"))
             {
-                TxtBx_2.Text = (float.Parse(num0) - float.Parse(TxtBx_2.Text)).ToString();
+                Subtract();
             }
             else if (operation.Equals("*"))
             {
-                TxtBx_2.Text = (float.Parse(num0) * float.Parse(TxtBx_2.Text)).ToString();
+                Multiply();
             }
             else if (operation.Equals("/"))
             {
-                TxtBx_2.Text = (float.Parse(num0)  / float.Parse(TxtBx_2.Text)).ToString();
+                Divide();
             }
 
             TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
@@ -48,131 +48,52 @@ namespace Calculator0
 
         private void Btn_0_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "0";
-            TxtBx_2.Text = TxtBx_2.Text + "0";
-            operationPressed = false;
+            displayCharacter("0");
         }
 
         private void Btn_1_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "1";
-            TxtBx_2.Text = TxtBx_2.Text + "1";
-            operationPressed = false;
+            displayCharacter("1");
         }
 
         private void Btn_2_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "2";
-            TxtBx_2.Text = TxtBx_2.Text + "2";
-            operationPressed = false;
+            displayCharacter("2");
         }
 
         private void Btn_3_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "3";
-            TxtBx_2.Text = TxtBx_2.Text + "3";
-            operationPressed = false;
+            displayCharacter("3");
         }
 
         private void Btn_4_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "4";
-            TxtBx_2.Text = TxtBx_2.Text + "4";
-            operationPressed = false;
+            displayCharacter("5");
         }
 
         private void Btn_5_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "5";
-            TxtBx_2.Text = TxtBx_2.Text + "5";
-            operationPressed = false;
+            displayCharacter("5");
         }
 
         private void Btn_6_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "6";
-            TxtBx_2.Text = TxtBx_2.Text + "6";
+            displayCharacter("6");
         }
 
         private void Btn_7_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "7";
-            TxtBx_2.Text = TxtBx_2.Text + "7";
-            operationPressed = false;
+            displayCharacter("7");
         }
 
         private void Btn_8_Click(object sender, EventArgs e)
         {
-            if (operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "8";
-            TxtBx_2.Text = TxtBx_2.Text + "8";
-            operationPressed = false;
+            displayCharacter("8");
         }
 
         private void Btn_9_Click(object sender, EventArgs e)
         {
-            if(operationPressed)
-            {
-                num0 = TxtBx_2.Text;
-                TxtBx_2.Text = "";
-            }
-
-            TxtBx_1.Text = TxtBx_1.Text + "9";
-            TxtBx_2.Text = TxtBx_2.Text + "9";
-            operationPressed = false;
+            displayCharacter("9");
         }
 
         private void Btn_Plus_Click(object sender, EventArgs e)
@@ -205,8 +126,39 @@ namespace Calculator0
 
         private void Btn_Dot_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + ".";
-            TxtBx_2.Text = TxtBx_2.Text + ".";
+            displayCharacter(".");
+        }
+
+        private void Add()
+        {
+            TxtBx_2.Text = (float.Parse(num0) + float.Parse(TxtBx_2.Text)).ToString();
+        }
+
+        private void Subtract()
+        {
+            TxtBx_2.Text = (float.Parse(num0) - float.Parse(TxtBx_2.Text)).ToString();
+        }
+
+        private void Multiply()
+        {
+            TxtBx_2.Text = (float.Parse(num0) * float.Parse(TxtBx_2.Text)).ToString();
+        }
+
+        private void Divide()
+        {
+            TxtBx_2.Text = (float.Parse(num0) / float.Parse(TxtBx_2.Text)).ToString();
+        }
+
+        private void displayCharacter(String character)
+        {
+            if (operationPressed)
+            {
+                num0 = TxtBx_2.Text;
+                TxtBx_2.Text = "";
+            }
+
+            TxtBx_1.Text = TxtBx_1.Text + character;
+            TxtBx_2.Text = TxtBx_2.Text + character;
             operationPressed = false;
         }
     }
