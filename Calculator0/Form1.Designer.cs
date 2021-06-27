@@ -29,7 +29,7 @@ namespace Calculator0
         /// </summary>
         private void InitializeComponent()
         {
-            this.Txtbx_1 = new System.Windows.Forms.TextBox();
+            this.TxtBx_1 = new System.Windows.Forms.TextBox();
             this.Btn_0 = new System.Windows.Forms.Button();
             this.Btn_Equal = new System.Windows.Forms.Button();
             this.Btn_Minus = new System.Windows.Forms.Button();
@@ -57,16 +57,16 @@ namespace Calculator0
             this.TxtBx_2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Txtbx_1
+            // TxtBx_1
             // 
-            this.Txtbx_1.BackColor = System.Drawing.SystemColors.Control;
-            this.Txtbx_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txtbx_1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Txtbx_1.Location = new System.Drawing.Point(12, 12);
-            this.Txtbx_1.Name = "Txtbx_1";
-            this.Txtbx_1.Size = new System.Drawing.Size(238, 16);
-            this.Txtbx_1.TabIndex = 33;
-            this.Txtbx_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtBx_1.BackColor = System.Drawing.SystemColors.Control;
+            this.TxtBx_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBx_1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TxtBx_1.Location = new System.Drawing.Point(12, 12);
+            this.TxtBx_1.Name = "TxtBx_1";
+            this.TxtBx_1.Size = new System.Drawing.Size(238, 16);
+            this.TxtBx_1.TabIndex = 33;
+            this.TxtBx_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Btn_0
             // 
@@ -350,7 +350,7 @@ namespace Calculator0
             this.Controls.Add(this.Btn_Multiply);
             this.Controls.Add(this.Btn_Plus);
             this.Controls.Add(this.Btn_Dot);
-            this.Controls.Add(this.Txtbx_1);
+            this.Controls.Add(this.TxtBx_1);
             this.Controls.Add(this.Btn_0);
             this.Controls.Add(this.Btn_Equal);
             this.Controls.Add(this.Btn_Minus);
@@ -377,7 +377,7 @@ namespace Calculator0
 
         #endregion
 
-        private System.Windows.Forms.TextBox Txtbx_1;
+        private System.Windows.Forms.TextBox TxtBx_1;
         private System.Windows.Forms.Button Btn_9;
         private System.Windows.Forms.Button Btn_8;
         private System.Windows.Forms.Button Btn_7;
