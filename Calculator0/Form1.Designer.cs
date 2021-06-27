@@ -70,17 +70,18 @@ namespace Calculator0
             // 
             // Btn_0
             // 
+            this.Btn_0.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_0.Location = new System.Drawing.Point(72, 291);
             this.Btn_0.Name = "Btn_0";
             this.Btn_0.Size = new System.Drawing.Size(55, 35);
             this.Btn_0.TabIndex = 32;
             this.Btn_0.Text = "0";
-            this.Btn_0.UseVisualStyleBackColor = true;
+            this.Btn_0.UseVisualStyleBackColor = false;
             this.Btn_0.Click += new System.EventHandler(this.Btn_0_Click);
             // 
             // Btn_Equal
             // 
-            this.Btn_Equal.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Btn_Equal.BackColor = System.Drawing.Color.LightSkyBlue;
             this.Btn_Equal.Location = new System.Drawing.Point(194, 291);
             this.Btn_Equal.Name = "Btn_Equal";
             this.Btn_Equal.Size = new System.Drawing.Size(55, 35);
@@ -91,7 +92,7 @@ namespace Calculator0
             // 
             // Btn_Minus
             // 
-            this.Btn_Minus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Minus.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Minus.Location = new System.Drawing.Point(194, 209);
             this.Btn_Minus.Name = "Btn_Minus";
             this.Btn_Minus.Size = new System.Drawing.Size(55, 35);
@@ -102,7 +103,7 @@ namespace Calculator0
             // 
             // Btn_Dvd
             // 
-            this.Btn_Dvd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Dvd.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Dvd.Location = new System.Drawing.Point(194, 127);
             this.Btn_Dvd.Name = "Btn_Dvd";
             this.Btn_Dvd.Size = new System.Drawing.Size(55, 35);
@@ -113,7 +114,7 @@ namespace Calculator0
             // 
             // Btn_Sqrt
             // 
-            this.Btn_Sqrt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Sqrt.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Sqrt.Location = new System.Drawing.Point(133, 127);
             this.Btn_Sqrt.Name = "Btn_Sqrt";
             this.Btn_Sqrt.Size = new System.Drawing.Size(55, 35);
@@ -123,7 +124,7 @@ namespace Calculator0
             // 
             // Btn_Sqr
             // 
-            this.Btn_Sqr.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Sqr.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Sqr.Location = new System.Drawing.Point(72, 127);
             this.Btn_Sqr.Name = "Btn_Sqr";
             this.Btn_Sqr.Size = new System.Drawing.Size(55, 35);
@@ -133,93 +134,102 @@ namespace Calculator0
             // 
             // Btn_9
             // 
+            this.Btn_9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_9.Location = new System.Drawing.Point(133, 168);
             this.Btn_9.Name = "Btn_9";
             this.Btn_9.Size = new System.Drawing.Size(55, 35);
             this.Btn_9.TabIndex = 26;
             this.Btn_9.Text = "9";
-            this.Btn_9.UseVisualStyleBackColor = true;
+            this.Btn_9.UseVisualStyleBackColor = false;
             this.Btn_9.Click += new System.EventHandler(this.Btn_9_Click);
             // 
             // Btn_8
             // 
+            this.Btn_8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Btn_8.Location = new System.Drawing.Point(72, 168);
             this.Btn_8.Name = "Btn_8";
             this.Btn_8.Size = new System.Drawing.Size(55, 35);
             this.Btn_8.TabIndex = 25;
             this.Btn_8.Text = "8";
-            this.Btn_8.UseVisualStyleBackColor = true;
+            this.Btn_8.UseVisualStyleBackColor = false;
             this.Btn_8.Click += new System.EventHandler(this.Btn_8_Click);
             // 
             // Btn_7
             // 
+            this.Btn_7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_7.Location = new System.Drawing.Point(11, 168);
             this.Btn_7.Name = "Btn_7";
             this.Btn_7.Size = new System.Drawing.Size(55, 35);
             this.Btn_7.TabIndex = 24;
             this.Btn_7.Text = "7";
-            this.Btn_7.UseVisualStyleBackColor = true;
+            this.Btn_7.UseVisualStyleBackColor = false;
             this.Btn_7.Click += new System.EventHandler(this.Btn_7_Click);
             // 
             // Btn_6
             // 
+            this.Btn_6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_6.Location = new System.Drawing.Point(133, 209);
             this.Btn_6.Name = "Btn_6";
             this.Btn_6.Size = new System.Drawing.Size(55, 35);
             this.Btn_6.TabIndex = 23;
             this.Btn_6.Text = "6";
-            this.Btn_6.UseVisualStyleBackColor = true;
+            this.Btn_6.UseVisualStyleBackColor = false;
             this.Btn_6.Click += new System.EventHandler(this.Btn_6_Click);
             // 
             // Btn_5
             // 
+            this.Btn_5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_5.Location = new System.Drawing.Point(72, 209);
             this.Btn_5.Name = "Btn_5";
             this.Btn_5.Size = new System.Drawing.Size(55, 35);
             this.Btn_5.TabIndex = 22;
             this.Btn_5.Text = "5";
-            this.Btn_5.UseVisualStyleBackColor = true;
+            this.Btn_5.UseVisualStyleBackColor = false;
             this.Btn_5.Click += new System.EventHandler(this.Btn_5_Click);
             // 
             // Btn_4
             // 
+            this.Btn_4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_4.Location = new System.Drawing.Point(11, 209);
             this.Btn_4.Name = "Btn_4";
             this.Btn_4.Size = new System.Drawing.Size(55, 35);
             this.Btn_4.TabIndex = 21;
             this.Btn_4.Text = "4";
-            this.Btn_4.UseVisualStyleBackColor = true;
+            this.Btn_4.UseVisualStyleBackColor = false;
             this.Btn_4.Click += new System.EventHandler(this.Btn_4_Click);
             // 
             // Btn_3
             // 
+            this.Btn_3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_3.Location = new System.Drawing.Point(133, 252);
             this.Btn_3.Name = "Btn_3";
             this.Btn_3.Size = new System.Drawing.Size(55, 35);
             this.Btn_3.TabIndex = 20;
             this.Btn_3.Text = "3";
-            this.Btn_3.UseVisualStyleBackColor = true;
+            this.Btn_3.UseVisualStyleBackColor = false;
             this.Btn_3.Click += new System.EventHandler(this.Btn_3_Click);
             // 
             // Btn_2
             // 
+            this.Btn_2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_2.Location = new System.Drawing.Point(72, 252);
             this.Btn_2.Name = "Btn_2";
             this.Btn_2.Size = new System.Drawing.Size(55, 35);
             this.Btn_2.TabIndex = 19;
             this.Btn_2.Text = "2";
-            this.Btn_2.UseVisualStyleBackColor = true;
+            this.Btn_2.UseVisualStyleBackColor = false;
             this.Btn_2.Click += new System.EventHandler(this.Btn_2_Click);
             // 
             // Btn_1
             // 
+            this.Btn_1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_1.Location = new System.Drawing.Point(11, 252);
             this.Btn_1.Name = "Btn_1";
             this.Btn_1.Size = new System.Drawing.Size(55, 35);
             this.Btn_1.TabIndex = 18;
             this.Btn_1.Text = "1";
-            this.Btn_1.UseVisualStyleBackColor = true;
+            this.Btn_1.UseVisualStyleBackColor = false;
             this.Btn_1.Click += new System.EventHandler(this.Btn_1_Click);
             // 
             // PlusMinus
@@ -245,7 +255,7 @@ namespace Calculator0
             // 
             // Btn_Plus
             // 
-            this.Btn_Plus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Plus.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Plus.Location = new System.Drawing.Point(194, 250);
             this.Btn_Plus.Name = "Btn_Plus";
             this.Btn_Plus.Size = new System.Drawing.Size(55, 35);
@@ -256,7 +266,7 @@ namespace Calculator0
             // 
             // Btn_Multiply
             // 
-            this.Btn_Multiply.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Multiply.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Multiply.Location = new System.Drawing.Point(194, 168);
             this.Btn_Multiply.Name = "Btn_Multiply";
             this.Btn_Multiply.Size = new System.Drawing.Size(55, 35);
@@ -267,7 +277,7 @@ namespace Calculator0
             // 
             // Btn_OneOver
             // 
-            this.Btn_OneOver.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_OneOver.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_OneOver.Location = new System.Drawing.Point(12, 127);
             this.Btn_OneOver.Name = "Btn_OneOver";
             this.Btn_OneOver.Size = new System.Drawing.Size(55, 35);
@@ -277,7 +287,7 @@ namespace Calculator0
             // 
             // Btn_Percent
             // 
-            this.Btn_Percent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Percent.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Percent.Location = new System.Drawing.Point(12, 86);
             this.Btn_Percent.Name = "Btn_Percent";
             this.Btn_Percent.Size = new System.Drawing.Size(55, 35);
@@ -287,7 +297,7 @@ namespace Calculator0
             // 
             // Btn_Backspace
             // 
-            this.Btn_Backspace.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Backspace.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Backspace.Location = new System.Drawing.Point(194, 86);
             this.Btn_Backspace.Name = "Btn_Backspace";
             this.Btn_Backspace.Size = new System.Drawing.Size(55, 35);
@@ -297,7 +307,7 @@ namespace Calculator0
             // 
             // Btn_GlobalEntry
             // 
-            this.Btn_GlobalEntry.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_GlobalEntry.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_GlobalEntry.Location = new System.Drawing.Point(133, 86);
             this.Btn_GlobalEntry.Name = "Btn_GlobalEntry";
             this.Btn_GlobalEntry.Size = new System.Drawing.Size(55, 35);
@@ -307,7 +317,7 @@ namespace Calculator0
             // 
             // Btn_ClearEntry
             // 
-            this.Btn_ClearEntry.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_ClearEntry.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_ClearEntry.Location = new System.Drawing.Point(72, 86);
             this.Btn_ClearEntry.Name = "Btn_ClearEntry";
             this.Btn_ClearEntry.Size = new System.Drawing.Size(55, 35);
