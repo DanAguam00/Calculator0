@@ -121,6 +121,7 @@ namespace Calculator0
             this.Btn_Sqrt.TabIndex = 28;
             this.Btn_Sqrt.Text = "x^1/2";
             this.Btn_Sqrt.UseVisualStyleBackColor = false;
+            this.Btn_Sqrt.Click += new System.EventHandler(this.Btn_Sqrt_Click);
             // 
             // Btn_Sqr
             // 
@@ -131,6 +132,7 @@ namespace Calculator0
             this.Btn_Sqr.TabIndex = 27;
             this.Btn_Sqr.Text = "x^2";
             this.Btn_Sqr.UseVisualStyleBackColor = false;
+            this.Btn_Sqr.Click += new System.EventHandler(this.Btn_Sqr_Click);
             // 
             // Btn_9
             // 
@@ -284,6 +286,7 @@ namespace Calculator0
             this.Btn_OneOver.TabIndex = 37;
             this.Btn_OneOver.Text = "1/x";
             this.Btn_OneOver.UseVisualStyleBackColor = false;
+            this.Btn_OneOver.Click += new System.EventHandler(this.Btn_OneOver_Click);
             // 
             // Btn_Percent
             // 
@@ -294,6 +297,7 @@ namespace Calculator0
             this.Btn_Percent.TabIndex = 41;
             this.Btn_Percent.Text = "%";
             this.Btn_Percent.UseVisualStyleBackColor = false;
+            this.Btn_Percent.Click += new System.EventHandler(this.Btn_Percent_Click);
             // 
             // Btn_Backspace
             // 
@@ -371,6 +375,7 @@ namespace Calculator0
             this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

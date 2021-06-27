@@ -12,7 +12,8 @@ namespace Calculator0
         private Boolean operationPressed = false;
         private String num0 = "";
         private String num1 = "";
-
+        private String oneOver = "1";
+        private String percent = "100";
         public string Operation { get => operation; set => operation = value; }
         public bool OperationPressed { get => operationPressed; set => operationPressed = value; }
         public string Num0 { get => num0; set => num0 = value; }
@@ -36,6 +37,22 @@ namespace Calculator0
         public void Divide()
         {
             Num1 = (float.Parse(Num0) / float.Parse(Num1)).ToString();
+        }
+        public void OneOver()
+        {
+            Num1 = (float.Parse(oneOver) / float.Parse(Num1)).ToString();
+        }
+        public void PowerSquare()
+        {
+            Num1 = (Math.Pow(float.Parse(Num1),2)).ToString();
+        }
+        public void SquareRoot()
+        {
+            Num1 = (Math.Sqrt(float.Parse(Num1))).ToString();
+        }
+        public void Percent()
+        {
+            Num1 = (float.Parse(Num1) / float.Parse(percent)).ToString();
         }
     }
 }
