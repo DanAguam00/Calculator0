@@ -12,103 +12,140 @@ namespace Calculator0
 {
     public partial class Calculator : Form
     {
+        ReferenceClass refer = new ReferenceClass();
+        operationClass ops = new operationClass();
+
         public Calculator()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Btn_Equal_Click(object sender, EventArgs e)
         {
-            if (Btn_Equal.Text == "=")
+            TxtBx_1.Text = TxtBx_1.Text + " = ";
+
+            if (refer.Operation.Equals("+"))
             {
-                Btn_Equal.Text = "Done";
+                refer.Num1 = TxtBx_2.Text;
+                ops.Add();
+                TxtBx_2.Text = refer.Num1;
             }
-            else
+            else if (refer.Operation.Equals("-"))
             {
-                Btn_Equal.Text = "=";
+                refer.Num1 = TxtBx_2.Text;
+                ops.Subtract();
+                TxtBx_2.Text = refer.Num1;
             }
+            else if (refer.Operation.Equals("*"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                ops.Multiply();
+                TxtBx_2.Text = refer.Num1;
+            }
+            else if (refer.Operation.Equals("/"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                ops.Divide();
+                TxtBx_2.Text = refer.Num1;
+            }
+
+            TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
         }
 
         private void Btn_0_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "0";
+            displayCharacter("0");
         }
 
         private void Btn_1_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "1";
+            displayCharacter("1");
         }
 
         private void Btn_2_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "2";
+            displayCharacter("2");
         }
 
         private void Btn_3_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "3";
+            displayCharacter("3");
         }
 
         private void Btn_4_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "4";
+            displayCharacter("5");
         }
 
         private void Btn_5_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "5";
+            displayCharacter("5");
         }
 
         private void Btn_6_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "6";
+            displayCharacter("6");
         }
 
         private void Btn_7_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "7";
+            displayCharacter("7");
         }
 
         private void Btn_8_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "8";
+            displayCharacter("8");
         }
 
         private void Btn_9_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "9";
+            displayCharacter("9");
         }
 
         private void Btn_Plus_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "+";
+            TxtBx_1.Text = TxtBx_1.Text + " + ";
+            refer.Operation = "+";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Minus_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "-";
+            TxtBx_1.Text = TxtBx_1.Text + " - ";
+            refer.Operation = "-";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Multiply_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "*";
+            TxtBx_1.Text = TxtBx_1.Text + " * ";
+            refer.Operation = "*";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Dvd_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + "/";
+            TxtBx_1.Text = TxtBx_1.Text + " / ";
+            refer.Operation = "/";
+            refer.OperationPressed = true;
         }
 
         private void Btn_Dot_Click(object sender, EventArgs e)
         {
-            TxtBx_1.Text = TxtBx_1.Text + ".";
+            displayCharacter(".");
         }
 
-        
+        private void displayCharacter(String character)
+        {
+            if (refer.OperationPressed)
+            {
+                refer.Num0 = TxtBx_2.Text;
+                TxtBx_2.Text = "";
+            }
+
+            TxtBx_1.Text = TxtBx_1.Text + character;
+            TxtBx_2.Text = TxtBx_2.Text + character;
+            refer.OperationPressed = false;
+        }
     }
 }
