@@ -369,10 +369,8 @@ namespace Calculator0
             this.Controls.Add(this.PlusMinus);
             this.Name = "Calculator";
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
