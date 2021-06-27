@@ -15,7 +15,7 @@ namespace Calculator0
 
         public string Operation { get => operation; set => operation = value; }
         public bool OperationPressed { get => operationPressed; set => operationPressed = value; }
-        public string Num1 { get => num1; set => num1 = value; }
-        public string Num0 { get => num0; set => num0 = value; }     
+        public string Num0 { get => num0; set => num0 = value; }
+        public string Num1 { get => num1; set => num1 = value; } 
     }
 }
