@@ -371,7 +371,6 @@ namespace Calculator0
             this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

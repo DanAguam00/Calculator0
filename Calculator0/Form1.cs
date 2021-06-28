@@ -13,7 +13,7 @@ namespace Calculator0
     public partial class Calculator : Form
     {
         ReferenceClass refer = new ReferenceClass();
-        operationClass ops = new operationClass();
+        
 
         public Calculator()
         {
@@ -27,25 +27,25 @@ namespace Calculator0
             if (refer.Operation.Equals("+"))
             {
                 refer.Num1 = TxtBx_2.Text;
-                ops.Add();
+                refer.Add();
                 TxtBx_2.Text = refer.Num1;
             }
             else if (refer.Operation.Equals("-"))
             {
                 refer.Num1 = TxtBx_2.Text;
-                ops.Subtract();
+                refer.Subtract();
                 TxtBx_2.Text = refer.Num1;
             }
             else if (refer.Operation.Equals("*"))
             {
                 refer.Num1 = TxtBx_2.Text;
-                ops.Multiply();
+                refer.Multiply();
                 TxtBx_2.Text = refer.Num1;
             }
             else if (refer.Operation.Equals("/"))
             {
                 refer.Num1 = TxtBx_2.Text;
-                ops.Divide();
+                refer.Divide();
                 TxtBx_2.Text = refer.Num1;
             }
 
