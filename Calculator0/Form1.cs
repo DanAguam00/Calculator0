@@ -199,5 +199,22 @@ namespace Calculator0
             refer.Operation = "%";
             refer.OperationPressed = true;
         }
+
+        private void Btn_GlobalClear_Click(object sender, EventArgs e)
+        {
+            TxtBx_1.Text = "";
+            TxtBx_2.Text = "";
+        }
+
+        private void Btn_Backspace_Click(object sender, EventArgs e)
+        {
+            TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1);
+            if (TxtBx_1.Text.Length == -1)
+            {
+                MessageBox.Show("No number or sign that can be removed.");
+            }
+
+            //TxtBx_2.Text = TxtBx_2.Text.Substring(0, TxtBx_2.Text.Length - 1);
+        }
     }
 }

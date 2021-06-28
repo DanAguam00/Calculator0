@@ -14,10 +14,12 @@ namespace Calculator0
         private String num1 = "";
         private String oneOver = "1";
         private String percent = "100";
+        private String text = "";
         public string Operation { get => operation; set => operation = value; }
         public bool OperationPressed { get => operationPressed; set => operationPressed = value; }
         public string Num0 { get => num0; set => num0 = value; }
         public string Num1 { get => num1; set => num1 = value; }
+        public string Text { get => text; set => text = value; }
 
         public void Add()
         {
