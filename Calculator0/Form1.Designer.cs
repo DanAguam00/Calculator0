@@ -330,6 +330,7 @@ namespace Calculator0
             this.Btn_ClearEntry.TabIndex = 38;
             this.Btn_ClearEntry.Text = "CE";
             this.Btn_ClearEntry.UseVisualStyleBackColor = false;
+            this.Btn_ClearEntry.Click += new System.EventHandler(this.Btn_ClearEntry_Click);
             // 
             // TxtBx_2
             // 
@@ -373,6 +374,8 @@ namespace Calculator0
             this.Controls.Add(this.Btn_2);
             this.Controls.Add(this.Btn_1);
             this.Controls.Add(this.PlusMinus);
+            this.MaximumSize = new System.Drawing.Size(280, 379);
+            this.MinimumSize = new System.Drawing.Size(280, 379);
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.ResumeLayout(false);

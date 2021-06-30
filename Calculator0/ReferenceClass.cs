@@ -15,27 +15,26 @@ namespace Calculator0
         private String oneOver = "1";
         private String percent = "100";
         private String text = "";
+        private float value = 0;
         public string Operation { get => operation; set => operation = value; }
         public bool OperationPressed { get => operationPressed; set => operationPressed = value; }
         public string Num0 { get => num0; set => num0 = value; }
         public string Num1 { get => num1; set => num1 = value; }
         public string Text { get => text; set => text = value; }
+        public float Value { get => value; set => this.value = value; }
 
         public void Add()
         {
             Num1 = (float.Parse(Num0) + float.Parse(Num1)).ToString();
         }
-
         public void Subtract()
         {
             Num1 = (float.Parse(Num0) - float.Parse(Num1)).ToString();
         }
-
         public void Multiply()
         {
             Num1 = (float.Parse(Num0) * float.Parse(Num1)).ToString();
         }
-
         public void Divide()
         {
             Num1 = (float.Parse(Num0) / float.Parse(Num1)).ToString();
