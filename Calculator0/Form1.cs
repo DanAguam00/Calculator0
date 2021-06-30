@@ -22,7 +22,7 @@ namespace Calculator0
 
         private void Btn_Equal_Click(object sender, EventArgs e)
         {
-            if (refer.OperationPressed)
+            if (refer.Operation != "")
             {
                 TxtBx_1.Text = TxtBx_1.Text + " = ";
 
@@ -74,9 +74,7 @@ namespace Calculator0
                     refer.Percent();
                     TxtBx_2.Text = refer.Num1;
                 }
-            }
-            if (TxtBx_1.Text != "")
-            {
+
                 refer.Value = float.Parse(TxtBx_2.Text);
                 refer.Operation = "";
                 TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
@@ -94,13 +92,13 @@ namespace Calculator0
             }
             else
             {
-                if (TxtBx_1.Text != "")
-                {
-                    refer.Value = float.Parse(TxtBx_2.Text);
-                    refer.OperationPressed = true;
-                    refer.Operation = operation;
-                    TxtBx_1.Text = TxtBx_1.Text + " " + operation + " ";
-                }
+                //if (TxtBx_1.Text != "")
+                //{
+                refer.Value = float.Parse(TxtBx_2.Text);
+                refer.OperationPressed = true;
+                refer.Operation = operation;
+                TxtBx_1.Text = TxtBx_1.Text + " " + operation + " ";
+                //}
             }
         }
         private void displayCharacter(String character)
