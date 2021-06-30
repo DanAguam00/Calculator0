@@ -52,7 +52,7 @@ namespace Calculator0
             this.Btn_OneOver = new System.Windows.Forms.Button();
             this.Btn_Percent = new System.Windows.Forms.Button();
             this.Btn_Backspace = new System.Windows.Forms.Button();
-            this.Btn_GlobalEntry = new System.Windows.Forms.Button();
+            this.Btn_GlobalClear = new System.Windows.Forms.Button();
             this.Btn_ClearEntry = new System.Windows.Forms.Button();
             this.TxtBx_2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -121,6 +121,7 @@ namespace Calculator0
             this.Btn_Sqrt.TabIndex = 28;
             this.Btn_Sqrt.Text = "x^1/2";
             this.Btn_Sqrt.UseVisualStyleBackColor = false;
+            this.Btn_Sqrt.Click += new System.EventHandler(this.Btn_Sqrt_Click);
             // 
             // Btn_Sqr
             // 
@@ -131,6 +132,7 @@ namespace Calculator0
             this.Btn_Sqr.TabIndex = 27;
             this.Btn_Sqr.Text = "x^2";
             this.Btn_Sqr.UseVisualStyleBackColor = false;
+            this.Btn_Sqr.Click += new System.EventHandler(this.Btn_Sqr_Click);
             // 
             // Btn_9
             // 
@@ -284,6 +286,7 @@ namespace Calculator0
             this.Btn_OneOver.TabIndex = 37;
             this.Btn_OneOver.Text = "1/x";
             this.Btn_OneOver.UseVisualStyleBackColor = false;
+            this.Btn_OneOver.Click += new System.EventHandler(this.Btn_OneOver_Click);
             // 
             // Btn_Percent
             // 
@@ -294,6 +297,7 @@ namespace Calculator0
             this.Btn_Percent.TabIndex = 41;
             this.Btn_Percent.Text = "%";
             this.Btn_Percent.UseVisualStyleBackColor = false;
+            this.Btn_Percent.Click += new System.EventHandler(this.Btn_Percent_Click);
             // 
             // Btn_Backspace
             // 
@@ -304,26 +308,29 @@ namespace Calculator0
             this.Btn_Backspace.TabIndex = 40;
             this.Btn_Backspace.Text = "<-";
             this.Btn_Backspace.UseVisualStyleBackColor = false;
+            this.Btn_Backspace.Click += new System.EventHandler(this.Btn_Backspace_Click);
             // 
-            // Btn_GlobalEntry
+            // Btn_GlobalClear
             // 
-            this.Btn_GlobalEntry.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_GlobalEntry.Location = new System.Drawing.Point(133, 86);
-            this.Btn_GlobalEntry.Name = "Btn_GlobalEntry";
-            this.Btn_GlobalEntry.Size = new System.Drawing.Size(55, 35);
-            this.Btn_GlobalEntry.TabIndex = 39;
-            this.Btn_GlobalEntry.Text = "C";
-            this.Btn_GlobalEntry.UseVisualStyleBackColor = false;
+            this.Btn_GlobalClear.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_GlobalClear.Location = new System.Drawing.Point(133, 86);
+            this.Btn_GlobalClear.Name = "Btn_GlobalClear";
+            this.Btn_GlobalClear.Size = new System.Drawing.Size(55, 35);
+            this.Btn_GlobalClear.TabIndex = 39;
+            this.Btn_GlobalClear.Text = "C";
+            this.Btn_GlobalClear.UseVisualStyleBackColor = false;
+            this.Btn_GlobalClear.Click += new System.EventHandler(this.Btn_GlobalClear_Click);
             // 
             // Btn_ClearEntry
             // 
             this.Btn_ClearEntry.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_ClearEntry.Location = new System.Drawing.Point(72, 86);
+            this.Btn_ClearEntry.Location = new System.Drawing.Point(73, 86);
             this.Btn_ClearEntry.Name = "Btn_ClearEntry";
             this.Btn_ClearEntry.Size = new System.Drawing.Size(55, 35);
             this.Btn_ClearEntry.TabIndex = 38;
             this.Btn_ClearEntry.Text = "CE";
             this.Btn_ClearEntry.UseVisualStyleBackColor = false;
+            this.Btn_ClearEntry.Click += new System.EventHandler(this.Btn_ClearEntry_Click);
             // 
             // TxtBx_2
             // 
@@ -344,7 +351,7 @@ namespace Calculator0
             this.Controls.Add(this.TxtBx_2);
             this.Controls.Add(this.Btn_Percent);
             this.Controls.Add(this.Btn_Backspace);
-            this.Controls.Add(this.Btn_GlobalEntry);
+            this.Controls.Add(this.Btn_GlobalClear);
             this.Controls.Add(this.Btn_ClearEntry);
             this.Controls.Add(this.Btn_OneOver);
             this.Controls.Add(this.Btn_Multiply);
@@ -367,10 +374,13 @@ namespace Calculator0
             this.Controls.Add(this.Btn_2);
             this.Controls.Add(this.Btn_1);
             this.Controls.Add(this.PlusMinus);
+            this.MaximumSize = new System.Drawing.Size(280, 379);
+            this.MinimumSize = new System.Drawing.Size(280, 379);
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -398,7 +408,7 @@ namespace Calculator0
         private System.Windows.Forms.Button Btn_OneOver;
         private System.Windows.Forms.Button Btn_Percent;
         private System.Windows.Forms.Button Btn_Backspace;
-        private System.Windows.Forms.Button Btn_GlobalEntry;
+        private System.Windows.Forms.Button Btn_GlobalClear;
         private System.Windows.Forms.Button Btn_ClearEntry;
         private System.Windows.Forms.TextBox TxtBx_2;
     }
