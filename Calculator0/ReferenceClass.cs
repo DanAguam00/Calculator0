@@ -25,7 +25,10 @@ namespace Calculator0
 
         public void Add()
         {
-            Num1 = (float.Parse(Num0) + float.Parse(Num1)).ToString();
+            if (Num1 != "")
+            {
+                Num1 = (value + float.Parse(Num1)).ToString();
+            }
         }
         public void Subtract()
         {
@@ -41,7 +44,10 @@ namespace Calculator0
         }
         public void OneOver()
         {
-            Num1 = (float.Parse(oneOver) / float.Parse(Num1)).ToString();
+            if (float.Parse(Num1) != 0)
+            {
+                Num1 = (float.Parse(oneOver) / float.Parse(Num1)).ToString();
+            }
         }
         public void PowerSquare()
         {

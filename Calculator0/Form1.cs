@@ -24,60 +24,71 @@ namespace Calculator0
         {
             if (refer.Operation != "")
             {
-                TxtBx_1.Text = TxtBx_1.Text + " = ";
+                if (TxtBx_2.Text != "")
+                {
+                    TxtBx_1.Text = TxtBx_1.Text + " = ";
 
-                if (refer.Operation.Equals("+"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.Add();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("-"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.Subtract();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("*"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.Multiply();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("/"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.Divide();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("1/"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.OneOver();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("^2"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.PowerSquare();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("^1/2"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.SquareRoot();
-                    TxtBx_2.Text = refer.Num1;
-                }
-                else if (refer.Operation.Equals("%"))
-                {
-                    refer.Num1 = TxtBx_2.Text;
-                    refer.Percent();
-                    TxtBx_2.Text = refer.Num1;
-                }
+                    if (refer.Operation.Equals("+"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.Add();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("-"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.Subtract();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("*"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.Multiply();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("/"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.Divide();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("1/"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.OneOver();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("sqr()"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.PowerSquare();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("sqrt()"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.SquareRoot();
+                        TxtBx_2.Text = refer.Num1;
+                    }
+                    else if (refer.Operation.Equals("%"))
+                    {
+                        refer.Num1 = TxtBx_2.Text;
+                        refer.Percent();
+                        TxtBx_2.Text = refer.Num1;
+                    }
 
-                refer.Value = float.Parse(TxtBx_2.Text);
-                refer.Operation = "";
-                TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
+                    refer.Value = float.Parse(TxtBx_2.Text);
+                    refer.Operation = "";
+                    TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Missing number");
+                    removeOperation(refer.Operation);
+                    refer.Operation = "";
+                    refer.OperationPressed = false;
+                    TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 3);
+                }
             }
         }
 
@@ -88,7 +99,7 @@ namespace Calculator0
                 Btn_Equal.PerformClick();
                 refer.OperationPressed = true;
                 refer.Operation = operation;
-                TxtBx_1.Text = TxtBx_1.Text + " " + operation + " ";
+                TxtBx_1.Text = refer.Value + " " + operation + " ";
             }
             else
             {
@@ -101,11 +112,15 @@ namespace Calculator0
                 }
             }
         }
+
+        private void removeOperation(String operations)
+        {
+            TxtBx_1.Text.Replace(refer.Operation,"");
+        }
         private void displayCharacter(String character)
         {
             if (refer.OperationPressed)
             {
-                refer.Num0 = TxtBx_2.Text;
                 TxtBx_2.Text = "";
             }
 
@@ -175,6 +190,7 @@ namespace Calculator0
         private void Btn_Plus_Click(object sender, EventArgs e)
         {
             operation("+");
+            TxtBx_2.Text = "";
         }
 
         private void Btn_Minus_Click(object sender, EventArgs e)
@@ -196,7 +212,7 @@ namespace Calculator0
         {
             if (TxtBx_1.Text != "")
             {
-                TxtBx_1.Text = "1 / " + TxtBx_1.Text;
+                TxtBx_1.Text = "1/" + TxtBx_1.Text;
                 refer.Operation = "1/";
                 refer.OperationPressed = true;
             }
@@ -207,7 +223,7 @@ namespace Calculator0
             if (TxtBx_1.Text != "")
             {
                 TxtBx_1.Text = "sqr(" + TxtBx_1.Text + ")";
-                refer.Operation = "^2";
+                refer.Operation = "sqr()";
                 refer.OperationPressed = true;
             }
         }
@@ -217,7 +233,7 @@ namespace Calculator0
             if (TxtBx_1.Text != "")
             {
                 TxtBx_1.Text = "sqrt(" + TxtBx_1.Text + ")";
-                refer.Operation = "^1/2";
+                refer.Operation = "sqrt()";
                 refer.OperationPressed = true;
 
             }
