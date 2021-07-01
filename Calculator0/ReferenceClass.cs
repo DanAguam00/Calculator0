@@ -16,42 +16,38 @@ namespace Calculator0
         private String percent = "100";
         private String text = "";
         private float value = 0;
+        private Boolean mathError = false;
         public string Operation { get => operation; set => operation = value; }
         public bool OperationPressed { get => operationPressed; set => operationPressed = value; }
         public string Num0 { get => num0; set => num0 = value; }
         public string Num1 { get => num1; set => num1 = value; }
         public string Text { get => text; set => text = value; }
         public float Value { get => value; set => this.value = value; }
+        public bool MathError { get => mathError; set => mathError = value; }
 
         public void Add()
         {
-            if (Num1 != "")
-            {
-                Num1 = (value + float.Parse(Num1)).ToString();
-            }
+            Num1 = (value + float.Parse(Num1)).ToString();
         }
         public void Subtract()
         {
-            Num1 = (float.Parse(Num0) - float.Parse(Num1)).ToString();
+            Num1 = (value - float.Parse(Num1)).ToString();
         }
         public void Multiply()
         {
-            Num1 = (float.Parse(Num0) * float.Parse(Num1)).ToString();
+            Num1 = (value * float.Parse(Num1)).ToString();
         }
         public void Divide()
         {
-            Num1 = (float.Parse(Num0) / float.Parse(Num1)).ToString();
+            Num1 = (value / float.Parse(Num1)).ToString();
         }
         public void OneOver()
         {
-            if (float.Parse(Num1) != 0)
-            {
-                Num1 = (float.Parse(oneOver) / float.Parse(Num1)).ToString();
-            }
+            Num1 = (float.Parse(oneOver) / float.Parse(Num1)).ToString();
         }
         public void PowerSquare()
         {
-            Num1 = (Math.Pow(float.Parse(Num1),2)).ToString();
+            Num1 = (Math.Pow(float.Parse(Num1), 2)).ToString();
         }
         public void SquareRoot()
         {

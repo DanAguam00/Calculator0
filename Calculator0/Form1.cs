@@ -26,70 +26,138 @@ namespace Calculator0
             {
                 if (TxtBx_2.Text != "")
                 {
-                    TxtBx_1.Text = TxtBx_1.Text + " = ";
-
-                    if (refer.Operation.Equals("+"))
+                    equal();
+                    if (refer.MathError == false)
                     {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.Add();
-                        TxtBx_2.Text = refer.Num1;
+                        TxtBx_1.Text = TxtBx_1.Text + " = ";
+                        refer.Value = float.Parse(TxtBx_2.Text);
+                        refer.Operation = "";
+                        TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
                     }
-                    else if (refer.Operation.Equals("-"))
+                    else
                     {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.Subtract();
-                        TxtBx_2.Text = refer.Num1;
+                        refer.Operation = "";
+                        TxtBx_2.Text = "Cannot Divide by Zero";
+                        disableButtons(true);
                     }
-                    else if (refer.Operation.Equals("*"))
-                    {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.Multiply();
-                        TxtBx_2.Text = refer.Num1;
-                    }
-                    else if (refer.Operation.Equals("/"))
-                    {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.Divide();
-                        TxtBx_2.Text = refer.Num1;
-                    }
-                    else if (refer.Operation.Equals("1/"))
-                    {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.OneOver();
-                        TxtBx_2.Text = refer.Num1;
-                    }
-                    else if (refer.Operation.Equals("sqr()"))
-                    {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.PowerSquare();
-                        TxtBx_2.Text = refer.Num1;
-                    }
-                    else if (refer.Operation.Equals("sqrt()"))
-                    {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.SquareRoot();
-                        TxtBx_2.Text = refer.Num1;
-                    }
-                    else if (refer.Operation.Equals("%"))
-                    {
-                        refer.Num1 = TxtBx_2.Text;
-                        refer.Percent();
-                        TxtBx_2.Text = refer.Num1;
-                    }
-
-                    refer.Value = float.Parse(TxtBx_2.Text);
-                    refer.Operation = "";
-                    TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
                 }
                 else
                 {
-                    MessageBox.Show("Missing number");
-                    removeOperation(refer.Operation);
-                    refer.Operation = "";
-                    refer.OperationPressed = false;
-                    TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 3);
+                    TxtBx_2.Text = "0";
+                    equal();
+                    if (refer.MathError == false)
+                    {
+                        TxtBx_1.Text = TxtBx_1.Text + " = ";
+                        refer.Value = float.Parse(TxtBx_2.Text);
+                        refer.Operation = "";
+                        TxtBx_1.Text = TxtBx_1.Text + TxtBx_2.Text;
+                    }
+                    else
+                    {
+                        refer.Operation = "";
+                        TxtBx_2.Text = "Cannot Divide by Zero";
+                        disableButtons(true);
+                    }
                 }
             }
+        }
+
+        private void disableButtons(Boolean disable)
+        {
+            Btn_0.Enabled = !disable;
+            Btn_1.Enabled = !disable;
+            Btn_2.Enabled = !disable;
+            Btn_3.Enabled = !disable;
+            Btn_4.Enabled = !disable;
+            Btn_5.Enabled = !disable;
+            Btn_6.Enabled = !disable;
+            Btn_7.Enabled = !disable;
+            Btn_8.Enabled = !disable;
+            Btn_9.Enabled = !disable;
+            Btn_ClearEntry.Enabled = !disable;
+            Btn_Dot.Enabled = !disable;
+            Btn_Dvd.Enabled = !disable;
+            Btn_Equal.Enabled = !disable;
+            Btn_Minus.Enabled = !disable;
+            Btn_Multiply.Enabled = !disable;
+            Btn_OneOver.Enabled = !disable;
+            Btn_Percent.Enabled = !disable;
+            Btn_Plus.Enabled = !disable;
+            Btn_Sqr.Enabled = !disable;
+            Btn_Sqrt.Enabled = !disable;
+            PlusMinus.Enabled = !disable;
+        }
+        private void equal()
+        {
+            if (refer.Operation.Equals("+"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                refer.Add();
+                TxtBx_2.Text = refer.Num1;
+            }
+            else if (refer.Operation.Equals("-"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                refer.Subtract();
+                TxtBx_2.Text = refer.Num1;
+            }
+            else if (refer.Operation.Equals("*"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                refer.Multiply();
+                TxtBx_2.Text = refer.Num1;
+            }
+            else if (refer.Operation.Equals("/"))
+            {
+                if (TxtBx_2.Text != "0")
+                {
+                    refer.Num1 = TxtBx_2.Text;
+                    refer.Divide();
+                    TxtBx_2.Text = refer.Num1;
+                }
+                else
+                {
+                    refer.MathError = true;
+                }
+            }
+            else if (refer.Operation.Equals("1/"))
+            {
+                if (TxtBx_2.Text != "0")
+                {
+                    refer.Num1 = TxtBx_2.Text;
+                    refer.OneOver();
+                    TxtBx_2.Text = refer.Num1;
+                }
+                else
+                {
+                    refer.MathError = true;
+                }
+            }
+            else if (refer.Operation.Equals("sqr()"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                refer.PowerSquare();
+                TxtBx_2.Text = refer.Num1;
+            }
+            else if (refer.Operation.Equals("sqrt()"))
+            {
+                if (!TxtBx_2.Text.Contains("-"))
+                {
+                    refer.Num1 = TxtBx_2.Text;
+                    refer.SquareRoot();
+                    TxtBx_2.Text = refer.Num1;
+                }
+                else
+                {
+                    refer.MathError = true;
+                }
+            }
+            else if (refer.Operation.Equals("%"))
+            {
+                refer.Num1 = TxtBx_2.Text;
+                refer.Percent();
+                TxtBx_2.Text = refer.Num1;
+            }            
         }
 
         private void operation(String operation)
@@ -117,6 +185,7 @@ namespace Calculator0
         {
             TxtBx_1.Text.Replace(refer.Operation,"");
         }
+
         private void displayCharacter(String character)
         {
             if (refer.OperationPressed)
@@ -235,7 +304,6 @@ namespace Calculator0
                 TxtBx_1.Text = "sqrt(" + TxtBx_1.Text + ")";
                 refer.Operation = "sqrt()";
                 refer.OperationPressed = true;
-
             }
         }
 
@@ -251,6 +319,11 @@ namespace Calculator0
 
         private void Btn_GlobalClear_Click(object sender, EventArgs e)
         {
+            disableButtons(false);
+            refer.MathError = false;
+            refer.Operation = "";
+            refer.OperationPressed = false;
+            refer.Value = 0;
             TxtBx_1.Text = "";
             TxtBx_2.Text = "";
         }
@@ -262,12 +335,31 @@ namespace Calculator0
 
         private void Btn_Backspace_Click(object sender, EventArgs e)
         {
-            if (TxtBx_1.Text.Length != 0)
+            if (refer.MathError == true)
             {
-                if (TxtBx_2.Text.Length != 0)
+                disableButtons(false);
+                refer.MathError = false;
+                TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1);
+                if (TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1) == refer.Operation)
                 {
-                    TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1);
-                    TxtBx_2.Text = TxtBx_2.Text.Substring(0, TxtBx_2.Text.Length - 1);
+                    refer.Operation = "";
+                    refer.OperationPressed = false;
+                }
+            }
+            else
+            {
+                if (TxtBx_1.Text.Length != 0)
+                {
+                    if (TxtBx_2.Text.Length != 0)
+                    {
+                        TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1);
+                        if (TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1) == refer.Operation)
+                        {
+                            refer.Operation = "";
+                            refer.OperationPressed = false;
+                        }
+                        TxtBx_2.Text = TxtBx_2.Text.Substring(0, TxtBx_2.Text.Length - 1);
+                    }
                 }
             }
         }
