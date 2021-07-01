@@ -92,13 +92,13 @@ namespace Calculator0
             }
             else
             {
-                //if (TxtBx_1.Text != "")
-                //{
-                refer.Value = float.Parse(TxtBx_2.Text);
-                refer.OperationPressed = true;
-                refer.Operation = operation;
-                TxtBx_1.Text = TxtBx_1.Text + " " + operation + " ";
-                //}
+                if (TxtBx_1.Text != "")
+                {
+                    refer.Value = float.Parse(TxtBx_2.Text);
+                    refer.OperationPressed = true;
+                    refer.Operation = operation;
+                    TxtBx_1.Text = TxtBx_1.Text + " " + operation + " ";
+                }
             }
         }
         private void displayCharacter(String character)
@@ -248,7 +248,27 @@ namespace Calculator0
         {
             if (TxtBx_1.Text.Length != 0)
             {
-                TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1);
+                if (TxtBx_2.Text.Length != 0)
+                {
+                    TxtBx_1.Text = TxtBx_1.Text.Substring(0, TxtBx_1.Text.Length - 1);
+                    TxtBx_2.Text = TxtBx_2.Text.Substring(0, TxtBx_2.Text.Length - 1);
+                }
+            }
+        }
+
+        private void PlusMinus_Click(object sender, EventArgs e)
+        {
+            if (TxtBx_1.Text != "")
+            {
+                if (TxtBx_2.Text.StartsWith("-"))
+                {
+                    TxtBx_2.Text = TxtBx_2.Text.Substring(1);
+                }
+                else if ((!TxtBx_2.Text.Contains("-")) && float.Parse(TxtBx_2.Text) != 0)
+                {
+                    TxtBx_1.Text = "-" + TxtBx_1.Text;
+                    TxtBx_2.Text = "-" + TxtBx_2.Text;
+                }
             }
         }
     }

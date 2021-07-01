@@ -243,6 +243,7 @@ namespace Calculator0
             this.PlusMinus.TabIndex = 17;
             this.PlusMinus.Text = "+/-";
             this.PlusMinus.UseVisualStyleBackColor = false;
+            this.PlusMinus.Click += new System.EventHandler(this.PlusMinus_Click);
             // 
             // Btn_Dot
             // 
