@@ -181,11 +181,6 @@ namespace Calculator0
             }
         }
 
-        private void removeOperation(String operations)
-        {
-            TxtBx_1.Text.Replace(refer.Operation,"");
-        }
-
         private void displayCharacter(String character)
         {
             if (refer.OperationPressed)
